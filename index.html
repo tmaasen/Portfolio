@@ -1,9 +1,77 @@
-Check out my projects! | Author @Tanner-Maasen
+<!-- Check out my projects! | Author @Tanner-Maasen
 <br><br>
 <ul>
     <li><a href="./Breathe & Relax App/index.html">Meditation App</a></li>
     <li><a href="./Video Landing/index.html">Video Landing</a></li>
     <li><a href="./Video Landing 2/index.html">Video Landing 2.0</a></li>
     <li><a href="./Parallax + Video Landing/index.html">Parallax</a></li>
-</ul>
+</ul> -->
 <!-- <a href="./Portfolio with Redux/public/index.html">Portfolio</a> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="icon" href="Assets/TM_logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio | Tanner Maasen</title>
+  </head>
+  <body>
+    <section>
+      <header class="topnav">
+        <div class="favicon">
+          <a href="index.html"
+            ><img
+              src="./Assets/TM_circle_logo.PNG"
+              height="60"
+              width="60"
+              alt=""
+          /></a>
+        </div>
+        <ul class="links">
+          <li><a class="nav-item" href="about.html">About Me</a></li>
+          <li><a class="nav-item" href="skills.html">Skills</a></li>
+          <li><a class="nav-item" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-item" href="contact.html">Contact Me</a></li>
+        </ul>
+        <div class="hamburgerMenu"></div>
+      </header>
+      <div class="hero">
+        <div class="heroText">
+          <p class="smaller">Hi, I am</p>
+          <br />
+          <p class="bigger">
+            Tanner Maasen<br /><span>Full-Stack Developer</span>
+          </p>
+        </div>
+        <div class="heroImage">
+          <img src="./Assets/hero.png" width="400" height="690" alt="me" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  const hamburger = document.querySelector(".hamburgerMenu");
+  const navMenu = document.querySelector(".links");
+
+  hamburger.addEventListener("click", mobileMenu);
+
+  function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
+
+  const navLink = document.querySelectorAll(".nav-item");
+
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+</script>
