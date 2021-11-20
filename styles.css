@@ -7,7 +7,7 @@ body {
 }
 
 /* mobile responsiveness */
-@media only screen and (max-width :900px) {
+@media screen and (max-width :900px) {
     .topnav .links.active {
         display: flex !important;
         flex-basis: 28%;
@@ -36,6 +36,33 @@ body {
     .hamburgerMenu .active {
         flex-direction: column;
         left: -14%;
+    }
+}
+@media screen and (max-width :400px) {
+      
+      div.hero p.bigger {
+        font-size: 30px;
+      }
+      div.hero p.smaller {
+        font-size: 15px;
+      }
+      div.hero span {
+        font-size: 10px;
+      }
+      div.heroText {
+        margin-left: 2%;
+      }
+      div.heroImage img {
+        width: 300px;
+        height: 550px;
+      }
+      .topnav .links.active {
+        right: 90px;
+        align-items: baseline;
+        width: 130px;
+    }
+    div.hamburgerMenu.active {
+        left: -40%;
     }
 }
 
