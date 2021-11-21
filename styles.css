@@ -42,7 +42,6 @@ body {
 @media screen and (max-width :400px) {
       body {
         height: 98vh;
-        background-size: 70vh;
       }
       div.hero p.bigger {
         font-size: 30px;
@@ -82,7 +81,7 @@ body {
     background-size: 30px;
     background-position: center;
     cursor: pointer;
-    left: 30%;
+    left: 12%;
     flex-basis: 35%;
 }
 .hamburgerMenu.active {
