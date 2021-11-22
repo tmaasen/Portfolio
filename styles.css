@@ -1,121 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+html {height: 100%;}
 body {
   font-family: "Raleway", sans-serif;
   background: #d7d7d7;
+  /* background-image: linear-gradient(40deg, #d7d7d7 30%, #000 45%); */
   background-image: linear-gradient(110deg, #d7d7d7 50%, #000 50%);
   background-repeat: no-repeat;
+  /* temporary */
+  overflow-y: hidden; 
 }
 
-/* mobile responsiveness */
-@media screen and (max-width :900px) {
-    .topnav .links.active {
-        display: flex !important;
-        flex-basis: 28%;
-        position: fixed;
-        top: -16px;
-        right: -21px;
-        width: 220px;
-        height: 90%;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column !important;
-        background-color: #fff;
-        border-radius: 25px;
-    }
-    .topnav .links {
-        display: none !important;
-    }
-    .topnav .links a {
-        color: #000 !important;
-    } 
-    .hamburgerMenu {
-        display: flex !important;
-        justify-content: center;
-        
-    }
-    .hamburgerMenu .active {
-        flex-direction: column;
-        left: -14%;
-    }
-}
-@media screen and (max-width :400px) {
-      body {
-        height: 98vh;
-      }
-      div.hero p.bigger {
-        font-size: 30px;
-      }
-      div.hero p.smaller {
-        font-size: 15px;
-      }
-      div.hero span {
-        font-size: 10px;
-      }
-      div.heroText {
-        margin-left: 2%;
-      }
-      div.heroImage img {
-        width: 300px;
-        height: 550px;
-      }
-      .topnav .links.active {
-        right: 10%;
-        align-items: baseline;
-        width: 130px;
-    }
-    div.hamburgerMenu.active {
-        left: -40%;
-    }
-}
+/* desktop responsiveness */
 
 /* navbar */
 
 .hamburgerMenu {
-    display: none;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background-image: url('./Assets/hamburger_menu.png');
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    cursor: pointer;
-    left: 12%;
-    flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  height: 60px;
+  background-image: url(./Assets/hamburger_menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: right;
+  cursor: pointer;
 }
 .hamburgerMenu.active {
     background: url('./Assets/X.png');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
-    left: -14%;
+    background-position: left;
 }
-
 .topnav {
   display: flex;
   flex-direction: row;
 }
-.topnav .favicon {
+div.favicon {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    flex-basis: 65%;
+    flex-basis: 75%;
 }
-.topnav .favicon img {
-    margin-left: 7%;
+div.favicon img {
+    width: 50px;
+    height: 50px;
 }
 .topnav .links {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
+    display: none;
+    flex-direction: column;
     justify-content: space-evenly;
     flex-basis: 35%;
+    padding: 0%;
+}
+.topnav .links.active {
+  animation:load_up 0.75s forwards;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  height: 30vh;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 .topnav .links a {
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    color: #000f;
+}
+.topnav .links.active li {
+  width: max-content;
 }
 .topnav .links a:hover {
   background: #ffffff;
@@ -126,31 +82,32 @@ body {
 }
 
 /* hero */
-
 .hero {
   display: flex;
-  flex-direction: row;
-  margin-right: 7%;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  z-index: -1;
 }
-
 .hero p.bigger {
-  font-weight: 700;
-  font-size: 50px;
-}
-.hero p.smaller {
   font-weight: 700;
   font-size: 30px;
 }
+.hero p.smaller {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0%;
+  margin-left: 20%;
+}
 .hero span {
   color: gray;
-  font-size: 20px;
+  font-size: 15px;
   justify-content: center;
   display: flex;
 }
 .heroText {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-basis: 65%;
   align-items: flex-start;
   margin-left: 7%;
@@ -158,14 +115,12 @@ body {
 .heroImage {
   z-index: -1;
   display: flex;
-  flex-direction: column;
-  justify-content: right;
+  flex-direction: row;
 }
 .heroImage img {
-  position:relative;
-  top:80%;
-  opacity:0;
-  animation:load_up 2s forwards;
+  animation:load_up 2.5s forwards;
+  width: 90%;
+  height: 100%;
 }
 @keyframes load_up{
   from{opacity:0;top:100%}
