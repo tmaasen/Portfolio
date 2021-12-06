@@ -10,9 +10,6 @@ body {
   /* temporary */
   overflow-y: hidden; 
 }
-
-/* desktop responsiveness */
-
 /* navbar */
 
 .hamburgerMenu {
@@ -106,6 +103,7 @@ div.favicon img {
   display: flex;
 }
 .heroText {
+  animation:load_up 2.5s forwards;
   display: flex;
   flex-direction: column;
   flex-basis: 65%;
@@ -125,4 +123,42 @@ div.favicon img {
 @keyframes load_up{
   from{opacity:0;top:100%}
   to{opacity:1;top:0%;} 
+}
+
+
+/* desktop responsiveness */
+@media screen and (min-width: 750px) {
+  .hero {
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero p.smaller {
+      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 0%;
+      margin-left: 10%;
+  }
+  .hero p.bigger {
+      font-weight: 700;
+      font-size: 40px;
+  }
+  .topnav .links {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+  }
+  .topnav .links li a {
+    color: #fff;
+  }
+  .links li:hover {
+    background: white;
+    border-radius: 5em;
+    padding: 5px;
+    color:#000
+  }
+  .hamburgerMenu {
+    display: none;
+  }
 }
