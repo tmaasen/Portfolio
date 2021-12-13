@@ -1,6 +1,6 @@
 import Image from "next/image";
-import hero from "../assets/hero.png";
-import logo from "../assets/TM_circle_logo.PNG";
+import hero from "../public/images/hero.png";
+import logo from "../public/images/TM_circle_logo.PNG";
 
 export default function Home() {
   return (
