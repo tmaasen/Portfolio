@@ -17,14 +17,14 @@ body {
   flex-direction: column;
   flex-basis: 40%;
   height: 60px;
-  background-image: url(./Assets/hamburger_menu.png);
+  background-image: url(../assets/hamburger_menu.png);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: right;
   cursor: pointer;
 }
 .hamburgerMenu.active {
-    background: url('./Assets/X.png');
+    background: url('../assets/X.png');
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: left;
