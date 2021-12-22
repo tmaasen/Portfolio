@@ -1,5 +1,6 @@
 import "../styles/styles.css";
 import Head from "next/head";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,8 +13,8 @@ function MyApp({ Component, pageProps }) {
         />
         <title>Tanner Maasen</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
       </Head>
+      <Script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></Script>
       <Component {...pageProps} />
     </>
   );
