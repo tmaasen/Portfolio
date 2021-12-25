@@ -2,7 +2,13 @@ import Image from "next/image";
 import hero from "../public/images/hero.png";
 import logo from "../public/images/TM_circle_logo.PNG";
 
-export default function Home() {
+export default function Home() 
+{
+  function openMenu() {
+    document.getElementById("hMenu").classList.toggle("active")
+    document.getElementById("links").classList.toggle("active")
+  }
+  
   return (
     <div>
       <header className="topnav">
@@ -11,8 +17,8 @@ export default function Home() {
             <Image alt="logo" src={logo} width={50} height={50} />
           </a>
         </div>
-        <div className="hamburgerMenu"></div>
-        <ul className="links">
+        <div id="hMenu" className="hamburgerMenu" onClick={openMenu}></div>
+        <ul id="links" className="links">
           <li>
             <a className="nav-item" href="about.html">
               About Me
@@ -35,7 +41,6 @@ export default function Home() {
           </li>
         </ul>
       </header>
-
       <div className="hero">
         <div className="heroText">
           <p className="smaller">Hi, I am</p>

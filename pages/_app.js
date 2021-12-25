@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         <title>Tanner Maasen</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <Script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></Script>
+      <Script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></Script>
       <Component {...pageProps} />
     </>
   );

@@ -5,26 +5,24 @@ body {
   font-family: "Raleway", sans-serif;
   background: #d7d7d7;
   /* background-image: linear-gradient(40deg, #d7d7d7 30%, #000 45%); */
-  background-image: linear-gradient(110deg, #d7d7d7 50%, #000 50%);
-  background-repeat: no-repeat;
   /* temporary */
-  overflow-y: hidden; 
+  /* overflow-y: hidden;  */
 }
-/* navbar */
 
+/* navbar */
 .hamburgerMenu {
   display: flex;
   flex-direction: column;
   flex-basis: 40%;
   height: 60px;
-  background-image: url('../public/images/hamburger_menu.png');
+  background: url('../public/images/hamburger_menu_dark.png');
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: right;
   cursor: pointer;
 }
 .hamburgerMenu.active {
-    background: url('../public/images/hamburger_menu.png');
+    background: url('../public/images/hamburger_menu_dark.png');
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: left;
@@ -59,8 +57,8 @@ div.favicon img {
   height: 30vh;
   border-radius: 14px;
   background-color: #f5f5f5;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .topnav .links a {
     font-weight: 700;
@@ -94,7 +92,6 @@ div.favicon img {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 0%;
-  margin-left: 20%;
 }
 .hero span {
   color: gray;
@@ -106,9 +103,7 @@ div.favicon img {
   animation:load_up 2.5s forwards;
   display: flex;
   flex-direction: column;
-  flex-basis: 65%;
-  align-items: flex-start;
-  margin-left: 7%;
+  align-items: center;
 }
 .heroImage {
   z-index: -1;
@@ -128,6 +123,10 @@ div.favicon img {
 
 /* desktop responsiveness */
 @media screen and (min-width: 750px) {
+  body {
+    background-image: linear-gradient(110deg, #d7d7d7 50%, #000 50%);
+    background-repeat: no-repeat;
+  }
   .hero {
     flex-direction: row;
     position: relative;
