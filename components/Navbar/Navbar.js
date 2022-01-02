@@ -1,31 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../../public/images/TM_circle_logo.PNG";
 import styles from "./Navbar.module.css";
+import useWindowSize from "../../utils/windowSizer/windowSizer";
 
 export default function Navbar() {
-  const size = useWindowSize()
+  const size = useWindowSize();
   const [toggled, setToggle] = useState(true);
-  
-  function useWindowSize() {
-    const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
-    });
-    useEffect(() => {
-      function handleResize() {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-      window.addEventListener("resize", handleResize);
-      handleResize();
-      return () => window.removeEventListener("resize", handleResize);
-    }, []); // Empty array ensures that effect is only run on mount
-    return windowSize;
-  }
 
   return (
     <div>
@@ -52,6 +34,9 @@ export default function Navbar() {
             toggled || size.width >= 750 ? styles.links : styles.mobileLinks
           }
           onClick={() => setToggle(!toggled)}>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
           <Link href="/about">
             <a>About Me</a>
           </Link>
@@ -60,9 +45,6 @@ export default function Navbar() {
           </Link>
           <Link href="/portfolio">
             <a>Portfolio</a>
-          </Link>
-          <Link href="/contact">
-            <a>Contact Me</a>
           </Link>
         </div>
       </header>

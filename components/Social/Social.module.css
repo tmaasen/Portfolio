@@ -1,0 +1,52 @@
+.bottomnav {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 2px #818181;
+  padding-top: 5px;
+}
+
+.mobileSocial,
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.mobileSocial span:hover {
+  cursor: pointer;
+}
+
+.disclosure {
+  font-size: small;
+  font-style: italic;
+  color: #818181;
+  text-align: center;
+  padding: 1em;
+}
+
+/* desktop */
+@media screen and (min-width: 750px) {
+  .social span:hover {
+    transform: scale(1.10) translateX(5px);
+    cursor: pointer;
+  }
+  .social {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: fit-content;
+    top: 5rem;
+    position: absolute;
+    height: 90vh;
+    margin-left: 0.5em;
+  }
+  .bottomnav {
+    border-top: none;
+    padding-top: 0;
+  }
+  .disclosure {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+  }
+}

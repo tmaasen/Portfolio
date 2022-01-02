@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-html {height: 100%;}
+html {
+  height: 100%;
+}
 body {
   font-family: "Raleway", sans-serif;
-  background: #d7d7d7;
+  /* background: #d7d7d7; */
+  background: #e4e4e4;
   /* background-image: linear-gradient(40deg, #d7d7d7 30%, #000 45%); */
   /* temporary */
   /* overflow-y: hidden;  */
+}
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
 /* desktop responsiveness */
@@ -14,5 +21,14 @@ body {
   body {
     background-image: linear-gradient(110deg, #d7d7d7 50%, #000 50%);
     background-repeat: no-repeat;
+    z-index: 2;
   }
+}
+
+summary {
+  list-style: none;
+}
+
+details:hover {
+  cursor: pointer;
 }

@@ -1,7 +1,8 @@
-import "../styles/globals.css";
+import "../styles/styles.css";
 import Head from "next/head";
 import Script from "next/script";
 import Navbar from "../components/Navbar/Navbar";
+import SocialLinks from "../components/Social/Social";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       <Script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></Script>
       <Navbar />
       <Component {...pageProps} />
+      <SocialLinks />
     </>
   );
 }

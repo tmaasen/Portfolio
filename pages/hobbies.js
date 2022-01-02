@@ -1,5 +1,10 @@
 export default function Hobbies() {
-    return (
-        <div>Hobbies</div>
-    )
+  useEffect(() => {
+    document.title = "Hobbies | Tanner Maasen";
+  }, []);
+  return (
+    <>
+      <h1>Hobbies</h1>
+    </>
+  );
 }
