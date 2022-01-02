@@ -1,4 +1,5 @@
 import Card from "../components/Card/Card";
+import { useEffect } from "react";
 
 export default function Portfolio() {
   useEffect(() => {
