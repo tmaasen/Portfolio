@@ -2,8 +2,9 @@ import Image from "next/image";
 import hero from "../public/images/hero.png";
 import content from "../utils/content.json";
 import { useEffect } from "react";
+import { ClapButton } from "@lyket/react";
 
-export default function AboutMe() {
+export default function AboutMe({counter}) {
   useEffect(() => {
     document.title = "About Me | Tanner Maasen";
   }, []);
@@ -20,6 +21,9 @@ export default function AboutMe() {
             border-radius: 50%;
             box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
+          .easterEgg {
+            margin-left: 1rem;
+          }
           @media screen and (min-width: 750px) {
             .container {
               background: white;
@@ -30,7 +34,7 @@ export default function AboutMe() {
             }
           }
           .content {
-            padding: 1em 2em 2em;
+            padding: 1em 2em 0em 2em;
           }
           .content .subtitle {
             line-height: 1.5em;
@@ -42,6 +46,11 @@ export default function AboutMe() {
             font-style: italic;
             color: #818181;
             margin-right: auto;
+          }
+          .easterEgg {
+            margin: 1rem;
+            background: transparent;
+            border: none;
           }
         `}
       </style>
@@ -62,6 +71,10 @@ export default function AboutMe() {
             <h5 className="subtitle">{content.about.subtitle}</h5>
             <br />
             <p>{content.about.description}</p>
+          </div>
+          <div className="easterEgg">
+            <ClapButton id="celebrate" hideCounterIfLessThan={1} />
+            {counter != 0 && counter}
           </div>
         </div>
       </div>
