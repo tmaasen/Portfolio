@@ -8,7 +8,7 @@ import { Provider } from "@lyket/react";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Provider apiKey="pt_502da8af21765756b41d4ebf2cb3f5">
+      <Provider apiKey={process.env.LYKET_API_KEY}>
         <Head>
           <link rel="icon" type="image/png" href="images/TM_logo.png" />
           <title>Tanner Maasen</title>
